@@ -121,7 +121,8 @@ public class MainActivity extends AppCompatActivity {
                     br.close();
 
                     OutputStreamWriter secondArchivo = new OutputStreamWriter(openFileOutput("security.xml", Activity.MODE_APPEND));
-                    secondArchivo.write(ultima);
+                    String fin = "</content_file>\n";
+                    secondArchivo.write(end + fin);
                     secondArchivo.flush();
                     secondArchivo.close();
 
